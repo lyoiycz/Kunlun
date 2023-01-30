@@ -39,7 +39,7 @@ If the above two issues get solved, the performance of Kunlun will be better.
 * download the latest OpenSSL from the website, to support curve25519, 
 modify crypto/ec/curve25519.c line 211: remove "static", then compile it:
 ```
-  $ ./Configure darwin64-x86_64-cc shared enable-ec_nistp_64_gcc_128 no-ssl2 no-ssl3 no-comp --openssldir=/usr/local/ssl/macos-x86_64
+  $ ./Configure darwin64-x86_64-cc no-shared enable-ec_nistp_64_gcc_128 no-ssl2 no-ssl3 no-comp --openssldir=/usr/local/ssl/macos-x86_64
   $ make depend
   $ sudo make install
 ```
